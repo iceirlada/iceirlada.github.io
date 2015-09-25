@@ -28,9 +28,9 @@ body {
   padding-top: 80px;
 }
 
-span.phone {
+/*span.linkedin {
   margin-right: 8px;
-}
+} used when there was a phone number before linkedin button*/
 
 header a {
   margin-right: 8px;

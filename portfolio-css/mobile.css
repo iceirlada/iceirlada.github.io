@@ -42,11 +42,11 @@ header p {
   padding: 8px;
 }
 
-span.phone {
+/*span.phone {
   margin-right: 0px;
-}
+} see note for span.phone in style.css*/
 
-header a, span.phone {
+header a /*span.phone*/ {
   display: block;
   color: white;
   text-decoration: none;
@@ -72,7 +72,7 @@ nav ul, p.description {
 
 #nav {
   position: relative;
-  margin-top: 365px;
+  margin-top: 345px;
   width: auto;
   text-align: center;
   background: black;
