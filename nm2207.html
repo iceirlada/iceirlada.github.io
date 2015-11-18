@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Irlada Seow (Ice) | NM2207</title>
+    <link rel="stylesheet" media="screen" href="portfolio-css/style.css" />
+    <!--animate.css stylesheet (follow index)-->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  </head>
+
+<body>
+
+  <div id="navheader">
+    <a href="index.html"><div class="round-s"><img src="portfolio-img/cartoonme.jpg" /></div>
+    <h1>Irlada Seow</h1></a>
+  </div>
+
+  <div id="nav2">
+    <nav class="nav2">
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="site-resume.html">Resume</a></li>
+        <li><a class="current" href="nm2207.html">NM2207</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id ="about-container"><!--removed class="animated fadeIn"-->
+    <main>
+    <h2>NM2207</h2>
+
+    <div id="about-text">
+      <h3>NM2207 Game:</h3><a href="http://irlada.me/newgame">[link]</a>
+      <h3>NM2207 Language Quizzer (Final Project):</h3><a href="http://irlada.me/languagequizzer">[link]</a>
+
+      <h3>NM2207 Language Quizzer Writeup</h3>Developed by Irlada Seow
+
+      <p class="left">Language has always been one of my greatest interests and this semester I had the privilege of learning a new language, which is Spanish. Since it is a rather lexically-rich language, it inspired me to develop a language quizzer that can be used to test the vocabulary of any language. Through developing this application, I could exercise the skills learnt in class such as styling HTML webpages with a CSS stylesheet and using HTML DOM reference, lists, arrays, event listeners, math objects, if/else conditionals and sounds.
+
+      <p class="left">For the webpage’s HTML structure, I started off with one of the “index.html” files used for tutorials and created divs for an input box (for the user to create the quizzer by adding words and their meanings to a word list) and a quizzer box (for the user to use the quizzer to test themselves) within the main div. I also styled the font for the whole page, the text alignment, the div background colors, the div border colors, the divs’ width and height, the input box to float left, and the quizzer box to float right in the CSS stylesheet, and modified other styling properties within the “appstyle.css.”
+
+      <p class="left">Within the input div, there is a div to display the word list as words get added to it, and below it there are text fields for the user to input both the foreign language word and its English meaning that he/she wishes to add to the list. The word gets submitted and displayed when the user clicks the “submit word” button. How this portion works in JavaScript can be seen in the “main.js” file, where I used HTML DOM reference to refer to element IDs that I wanted to use. I decided to make the word list an empty list (wordlist) with each array added when the user inputs the foreign word and its meaning. An event listener would listen for clicks on the “submit word” button (inputButton), and create an object array with “word”, “meaning”, and “string” properties. The text that user had typed in the text fields will then be passed in as values for the “word” and “meaning” properties of that object array. As for the “string” property, a string would be constructed with both word and meaning values to be displayed in the div for displaying the word list (inputDisplay) as each word gets added.
+
+      <p class="left">In the CSS stylesheet, I made the “inputDisplay” div scrollable and its max-height 100px so that the automatic overflow does not make it stretch too long vertically. I also learnt a trick to set the scroll position to the bottom of the div so that the latest added word at the bottom of the list is always visible to the user (http://stackoverflow.com/questions/7063627/force-scrollbar-to-bottom). When the user is done making the word list, the “doneButton” listens for clicks to show the initially hidden quizzer div and hides the input div.
+
+      <p class="left">Next, what the quizzer div does is that it displays random English meanings of the foreign words that had been submitted into the word list earlier on in the input div. To generate a random array index number, I used a math function (http://stackoverflow.com/questions/1527803/generating-random-numbers-in-javascript-in-a-specific-range) to return a random number between 0 (first array, inclusive) and the total number of arrays in the word list (totalWords). The user has to answer with the foreign word (that corresponds to the English meaning displayed) in the text field. The “submit answer” button (ansButton) listens for a click and checks if the correct answer has been submitted. With every answer submitted, the ansButton is hidden and the nextButton is shown. The array that had been used for quizzing is also spliced from the wordlist to make sure it is not used twice (http://www.w3schools.com/js/js_array_methods.asp). When the nextButton is clicked, the value of totalWords is decreased by 1 to account for the spliced array and a new random array index number is generated. The quizzing process is repeated again until there are no words left in the word list.
+
+      <p class="left">For additional interactivity and status indication, I also used if conditionals to check for correct and wrong answers, and display the corresponding results (if the answer is wrong, the correct answer is displayed as well) and play the corresponding audio files. Another use for conditional statements is to check for possible usage disruptions. For example, in the input div, the user can only submit a word if there are inputs for both the foreign word and its meaning in both text fields (if not, error boxes appear). He or she also can only “activate” the quizzer if there are arrays on the list to be quizzed on.
+
+    </div>
+
+    </main>
+  </div>
+
+</body>
+</html>
